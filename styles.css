@@ -9,14 +9,14 @@ body {
   background: #f8f8f8;
 }
 
-/* Footer Base */
+/* Footer */
 .footer {
   background-color: #000;
   color: #fff;
   padding: 40px 80px 20px;
 }
 
-/* Top Section */
+/* Header area */
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -24,44 +24,30 @@ body {
   margin-bottom: 40px;
 }
 
-.footer-logo h2 {
-  font-size: 26px;
-  color: #fff;
-  font-weight: 500;
-}
-
-/* Social Icons */
-.social-icons {
+/* ✅ Media icons container must be flex */
+.media-icons {
   display: flex;
   gap: 15px;
 }
 
-.media-icons {
-  display: inline-block;
+.media-icons a {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: #1a1a1a;
-  text-align: center;
-  line-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  font-size: 16px;
-  transition: all 0.3s ease;
 }
 
-.media-icons:nth-child(1) { background: #3b5998; } /* Facebook */
-.media-icons:nth-child(2) { background: #1da1f2; } /* Twitter */
-.media-icons:nth-child(3) { background: #e1306c; } /* Instagram */
-.media-icons:nth-child(4) { background: #0077b5; } /* LinkedIn */
-.media-icons:nth-child(5) { background: #ff0000; } /* YouTube */
+.media-icons a:nth-child(1) { background: #3b5998; }
+.media-icons a:nth-child(2) { background: #1da1f2; }
+.media-icons a:nth-child(3) { background: #e1306c; }
+.media-icons a:nth-child(4) { background: #0077b5; }
+.media-icons a:nth-child(5) { background: #ff0000; }
 
-.media-icons:hover {
-  transform: translateY(-4px);
-  opacity: 0.8;
-}
-
-/* Middle Section */
-.footer-content {
+/* ✅ .link-boxes must be flex */
+.link-boxes {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -69,7 +55,7 @@ body {
   margin-bottom: 40px;
 }
 
-.footer-section h3 {
+.box h3 {
   font-size: 18px;
   margin-bottom: 12px;
   border-bottom: 2px solid #fff;
@@ -77,31 +63,30 @@ body {
   padding-bottom: 5px;
 }
 
-.footer-section ul {
+.box ul {
   list-style: none;
 }
 
-.footer-section ul li {
+.box ul li {
   margin-bottom: 8px;
 }
 
-.footer-section ul li a {
+.box ul li a {
   text-decoration: none;
   color: #bbb;
-  transition: 0.3s;
 }
 
-.footer-section ul li a:hover {
+.box ul li a:hover {
   color: #fff;
 }
 
-.footer-section p {
+.box p {
   font-size: 14px;
   color: #ccc;
   line-height: 1.5;
 }
 
-/* Bottom Section */
+/* Footer bottom */
 .footer-bottom {
   border-top: 1px solid #222;
   padding-top: 15px;
@@ -130,10 +115,9 @@ body {
   .footer-top {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
   }
 
-  .footer-content {
+  .link-boxes {
     flex-direction: column;
     text-align: center;
   }
@@ -141,6 +125,5 @@ body {
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
-    text-align: center;
   }
 }
